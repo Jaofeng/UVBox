@@ -1,0 +1,20 @@
+[Eagle]
+Version="07 05 00"
+Platform="Mac OS X"
+Serial="62191E841E-LSR-WLM-1EL"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="/Users/ChenJaofeng/Documents/eagle/Librarys/0_MyCustom.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="0 -22 599 377"
+State=1
+Number=0
+
+[Desktop]
+Screen="1680 1050"
+Window="Win_1"
