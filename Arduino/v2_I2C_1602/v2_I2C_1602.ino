@@ -1,5 +1,6 @@
 /*********************************************
  ** UV 曝光箱控制板 v1.00
+ ** Last update : 2016/05/20
  ** 功能概述：
  ** 1. 使用 I2C 溝通界面 Address 為 0x3F(PCF8574A) 
  **    與 HD44780 相容之 LCD1602 作為顯示輸出
@@ -102,9 +103,7 @@ Thread atPlayAlarm = Thread();
 // 程式進入點
 void setup() {
   Serial.begin(9600);
-  while (!Serial) {
-    ; // 等待 Serial Port 備妥
-  }
+  while (!Serial);  // 等待 Serial Port 備妥
   SetPinDefine();
   EEPROM.setMemPool(MEM_BASE, EEPROMSizeATmega328);
   EEPROM.setMaxAllowedWrites(MAX_ALLOW_WRITES);
@@ -211,7 +210,7 @@ void PlayAlarm() {
 
 // 檢查按鍵狀態
 void CheckButtons() {
-  int isPress = HIGH;
+  boolean isPress = HIGH;
   int v = 0;
   isPress = digitalRead(KEY_START_PIN);
   if (!pressStart && isPress == LOW) {  // 按下開始鍵並放開
@@ -373,10 +372,10 @@ void InitializationLCD() {
   lcd.backlight(); // finish with backlight on
   lcd.setCursor(0, 0); //Start at character 4 on line 0
   lcd.print(F("Hello, Sir!"));
-  delay(1000);
+  delay(500);
   lcd.setCursor(0, 1);
   lcd.print(F("Have a Nice Day!"));
-  delay(1000);
+  delay(500);
   SetCustomChar();
   for(int i = 0; i <16; i++) {
     lcd.scrollDisplayLeft();
