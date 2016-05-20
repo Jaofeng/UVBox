@@ -359,10 +359,9 @@ void CheckButtons() {
 // 初始化LCD
 void InitializationLCD() {
   lcd.init();
-  lcd.noBacklight();
-  delay(100);
   lcd.clear();
-  delay(100);
+  lcd.noBacklight();
+  delay(200);
   for (uint8_t i = 0; i < 3; i++) {
     lcd.backlight();
     delay(100);
