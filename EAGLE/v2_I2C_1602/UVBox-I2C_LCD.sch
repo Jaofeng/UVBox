@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="8.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -21337,14 +21338,14 @@ System Programmable Flash&lt;/b&gt;&lt;br&gt;
 <part name="VR1" library="rcl" deviceset="R-TRIMM" device="T93XA"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="Q2" library="transistor-npn" deviceset="BC817*" device="SMD" technology="-16" value="BC817"/>
-<part name="GND13" library="supply1" deviceset="GND" device=""/>
-<part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="VR2" library="rcl" deviceset="R-TRIMM" device="T93XA"/>
-<part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="C10" library="rcl" deviceset="C-EU" device="C0603" value="104"/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="C11" library="rcl" deviceset="CPOL-EU" device="SMCA" value="10n"/>
 <part name="P+12" library="supply1" deviceset="+5V" device=""/>
+<part name="GND13" library="supply1" deviceset="GND" device=""/>
+<part name="P+13" library="supply1" deviceset="+5V" device=""/>
+<part name="C12" library="rcl" deviceset="C-EU" device="C0603" value="104"/>
 </parts>
 <sheets>
 <sheet>
@@ -21353,7 +21354,7 @@ System Programmable Flash&lt;/b&gt;&lt;br&gt;
 Design By Jaofeng Chen</text>
 </plain>
 <instances>
-<instance part="GND7" gate="1" x="144.78" y="76.2"/>
+<instance part="GND7" gate="1" x="139.7" y="76.2"/>
 <instance part="R8" gate="G$1" x="147.32" y="121.92" smashed="yes" rot="R90">
 <attribute name="NAME" x="145.8214" y="118.11" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="145.796" y="122.174" size="1.778" layer="96" rot="R90"/>
@@ -21364,9 +21365,9 @@ Design By Jaofeng Chen</text>
 <attribute name="VALUE" x="227.33" y="78.74" size="1.778" layer="96"/>
 </instance>
 <instance part="GND10" gate="1" x="246.38" y="81.28"/>
-<instance part="C8" gate="G$1" x="144.78" y="83.82" smashed="yes" rot="R180">
-<attribute name="NAME" x="143.256" y="83.439" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="145.161" y="91.44" size="1.778" layer="96" rot="R270"/>
+<instance part="C8" gate="G$1" x="139.7" y="83.82" smashed="yes" rot="R180">
+<attribute name="NAME" x="138.176" y="83.439" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="140.081" y="91.44" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="C9" gate="G$1" x="152.4" y="121.92" smashed="yes" rot="R180">
 <attribute name="NAME" x="156.464" y="126.111" size="1.778" layer="95" rot="R180"/>
@@ -21497,10 +21498,10 @@ Design By Jaofeng Chen</text>
 <instance part="GND8" gate="1" x="251.46" y="27.94" smashed="yes">
 <attribute name="VALUE" x="248.92" y="25.4" size="1.778" layer="96"/>
 </instance>
-<instance part="RN1" gate="A" x="220.98" y="45.72" rot="R90"/>
-<instance part="RN1" gate="B" x="218.44" y="45.72" rot="R90"/>
-<instance part="RN1" gate="C" x="215.9" y="45.72" rot="R90"/>
-<instance part="RN1" gate="D" x="213.36" y="45.72" rot="R90"/>
+<instance part="RN1" gate="A" x="213.36" y="45.72" rot="R90"/>
+<instance part="RN1" gate="B" x="215.9" y="45.72" rot="R90"/>
+<instance part="RN1" gate="C" x="218.44" y="45.72" rot="R90"/>
+<instance part="RN1" gate="D" x="220.98" y="45.72" rot="R90"/>
 <instance part="JP1" gate="G$1" x="238.76" y="109.22">
 <attribute name="PIN1" x="238.76" y="109.22" size="1.778" layer="96" display="off"/>
 <attribute name="PIN3" x="241.3" y="104.14" size="1.778" layer="96" display="off"/>
@@ -21562,8 +21563,8 @@ Design By Jaofeng Chen</text>
 <instance part="P+2" gate="1" x="55.88" y="129.54" smashed="yes">
 <attribute name="VALUE" x="53.594" y="130.302" size="1.778" layer="96"/>
 </instance>
-<instance part="P+7" gate="1" x="139.7" y="93.98" smashed="yes" rot="R90">
-<attribute name="VALUE" x="138.938" y="91.694" size="1.778" layer="96" rot="R90"/>
+<instance part="P+7" gate="1" x="134.62" y="96.52" smashed="yes">
+<attribute name="VALUE" x="132.334" y="97.282" size="1.778" layer="96"/>
 </instance>
 <instance part="P+1" gate="1" x="20.32" y="63.5" smashed="yes">
 <attribute name="VALUE" x="18.034" y="64.262" size="1.778" layer="96"/>
@@ -21595,38 +21596,29 @@ Design By Jaofeng Chen</text>
 <attribute name="NAME" x="188.722" y="124.968" size="1.778" layer="95"/>
 <attribute name="VALUE" x="183.896" y="121.285" size="1.778" layer="96"/>
 </instance>
-<instance part="LCD" gate="G$1" x="91.44" y="40.64" rot="MR270"/>
+<instance part="LCD" gate="G$1" x="81.28" y="40.64" rot="MR270"/>
 <instance part="IC2" gate="G$1" x="43.18" y="40.64"/>
-<instance part="P+11" gate="1" x="76.2" y="66.04" smashed="yes">
-<attribute name="VALUE" x="73.914" y="66.802" size="1.778" layer="96"/>
+<instance part="P+11" gate="1" x="68.58" y="71.12" smashed="yes">
+<attribute name="VALUE" x="66.294" y="71.882" size="1.778" layer="96"/>
 </instance>
-<instance part="RN3" gate="A" x="73.66" y="40.64" rot="R180"/>
+<instance part="RN3" gate="A" x="99.06" y="55.88" rot="R270"/>
 <instance part="RN3" gate="B" x="25.4" y="55.88" rot="R270"/>
 <instance part="RN3" gate="C" x="27.94" y="55.88" rot="R270"/>
 <instance part="RN3" gate="D" x="30.48" y="55.88" rot="R270"/>
-<instance part="VR1" gate="G$1" x="68.58" y="60.96" smashed="yes" rot="MR270">
-<attribute name="NAME" x="72.39" y="64.389" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="72.39" y="64.77" size="1.778" layer="96" rot="MR0"/>
+<instance part="VR1" gate="G$1" x="60.96" y="60.96" smashed="yes" rot="MR180">
+<attribute name="NAME" x="64.135" y="60.706" size="1.778" layer="95" rot="MR270"/>
+<attribute name="VALUE" x="57.15" y="64.77" size="1.778" layer="96" rot="MR270"/>
 </instance>
-<instance part="GND12" gate="1" x="81.28" y="66.04" smashed="yes" rot="R180">
-<attribute name="VALUE" x="79.248" y="67.056" size="1.778" layer="96"/>
+<instance part="GND12" gate="1" x="73.66" y="66.04" smashed="yes" rot="R180">
+<attribute name="VALUE" x="71.628" y="67.056" size="1.778" layer="96"/>
 </instance>
-<instance part="Q2" gate="G$1" x="66.04" y="22.86" smashed="yes" rot="R270">
-<attribute name="NAME" x="69.088" y="24.13" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="61.976" y="18.034" size="1.778" layer="96"/>
+<instance part="Q2" gate="G$1" x="106.68" y="43.18" smashed="yes">
+<attribute name="NAME" x="105.41" y="46.228" size="1.778" layer="95"/>
+<attribute name="VALUE" x="111.506" y="39.116" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND13" gate="1" x="60.96" y="60.96" smashed="yes" rot="R270">
-<attribute name="VALUE" x="60.198" y="58.674" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="GND14" gate="1" x="58.42" y="20.32" smashed="yes" rot="R270">
-<attribute name="VALUE" x="57.658" y="18.034" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="VR2" gate="G$1" x="81.28" y="17.78" smashed="yes" rot="MR180">
-<attribute name="NAME" x="77.851" y="21.59" size="1.778" layer="95" rot="MR270"/>
-<attribute name="VALUE" x="77.47" y="21.59" size="1.778" layer="96" rot="MR270"/>
-</instance>
-<instance part="GND15" gate="1" x="81.28" y="10.16" smashed="yes">
-<attribute name="VALUE" x="83.566" y="9.398" size="1.778" layer="96" rot="R180"/>
+<instance part="VR2" gate="G$1" x="104.14" y="55.88" smashed="yes" rot="MR180">
+<attribute name="NAME" x="107.823" y="55.118" size="1.778" layer="95" rot="MR270"/>
+<attribute name="VALUE" x="100.33" y="59.69" size="1.778" layer="96" rot="MR270"/>
 </instance>
 <instance part="C10" gate="G$1" x="55.88" y="96.52" smashed="yes" rot="R180">
 <attribute name="NAME" x="53.467" y="96.266" size="1.778" layer="95" rot="R270"/>
@@ -21642,6 +21634,16 @@ Design By Jaofeng Chen</text>
 <instance part="P+12" gate="1" x="27.94" y="101.6" smashed="yes">
 <attribute name="VALUE" x="25.654" y="102.362" size="1.778" layer="96"/>
 </instance>
+<instance part="GND13" gate="1" x="73.66" y="17.78" smashed="yes">
+<attribute name="VALUE" x="75.692" y="16.764" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="P+13" gate="1" x="104.14" y="63.5" smashed="yes">
+<attribute name="VALUE" x="101.854" y="64.262" size="1.778" layer="96"/>
+</instance>
+<instance part="C12" gate="G$1" x="147.32" y="83.82" smashed="yes" rot="R180">
+<attribute name="NAME" x="145.796" y="83.439" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="147.701" y="91.44" size="1.778" layer="96" rot="R270"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -21650,15 +21652,19 @@ Design By Jaofeng Chen</text>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="154.94" y1="78.74" x2="152.4" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="78.74" x2="144.78" y2="78.74" width="0.1524" layer="91"/>
-<junction x="144.78" y="78.74"/>
+<wire x1="152.4" y1="78.74" x2="147.32" y2="78.74" width="0.1524" layer="91"/>
+<junction x="139.7" y="78.74"/>
 <pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="81.28" x2="144.78" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="78.74" x2="139.7" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="81.28" x2="139.7" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="MCU" gate="G$1" pin="GND"/>
 <pinref part="MCU" gate="G$1" pin="AGND"/>
 <wire x1="154.94" y1="91.44" x2="152.4" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="91.44" x2="152.4" y2="78.74" width="0.1524" layer="91"/>
 <junction x="152.4" y="78.74"/>
+<pinref part="C12" gate="G$1" pin="1"/>
+<wire x1="147.32" y1="81.28" x2="147.32" y2="78.74" width="0.1524" layer="91"/>
+<junction x="147.32" y="78.74"/>
 </segment>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
@@ -21807,21 +21813,9 @@ Design By Jaofeng Chen</text>
 </segment>
 <segment>
 <pinref part="LCD" gate="G$1" pin="VSS"/>
-<wire x1="86.36" y1="60.96" x2="81.28" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="60.96" x2="81.28" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="60.96" x2="73.66" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="60.96" x2="73.66" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="GND12" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="Q2" gate="G$1" pin="E"/>
-<pinref part="GND14" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="VR2" gate="G$1" pin="E"/>
-<pinref part="GND15" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="VR1" gate="G$1" pin="E"/>
-<pinref part="GND13" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="USB" gate="G$1" pin="GND"/>
@@ -21831,6 +21825,12 @@ Design By Jaofeng Chen</text>
 <wire x1="35.56" y1="109.22" x2="35.56" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="109.22" x2="35.56" y2="109.22" width="0.1524" layer="91"/>
 <junction x="35.56" y="109.22"/>
+</segment>
+<segment>
+<pinref part="LCD" gate="G$1" pin="K"/>
+<pinref part="GND13" gate="1" pin="GND"/>
+<wire x1="76.2" y1="22.86" x2="73.66" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="22.86" x2="73.66" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -21998,18 +21998,22 @@ Design By Jaofeng Chen</text>
 </net>
 <net name="+5V" class="0">
 <segment>
-<wire x1="144.78" y1="93.98" x2="142.24" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="93.98" x2="134.62" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="C8" gate="G$1" pin="2"/>
-<wire x1="144.78" y1="88.9" x2="144.78" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="93.98" x2="149.86" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="88.9" x2="139.7" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="93.98" x2="147.32" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="93.98" x2="149.86" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="93.98" x2="149.86" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="86.36" x2="154.94" y2="86.36" width="0.1524" layer="91"/>
-<junction x="144.78" y="93.98"/>
+<junction x="139.7" y="93.98"/>
 <pinref part="MCU" gate="G$1" pin="VCC"/>
 <pinref part="MCU" gate="G$1" pin="AVCC"/>
 <wire x1="149.86" y1="93.98" x2="154.94" y2="93.98" width="0.1524" layer="91"/>
 <junction x="149.86" y="93.98"/>
 <pinref part="P+7" gate="1" pin="+5V"/>
+<pinref part="C12" gate="G$1" pin="2"/>
+<wire x1="147.32" y1="88.9" x2="147.32" y2="93.98" width="0.1524" layer="91"/>
+<junction x="147.32" y="93.98"/>
 </segment>
 <segment>
 <pinref part="ICSP" gate="G$1" pin="2"/>
@@ -22035,20 +22039,6 @@ Design By Jaofeng Chen</text>
 <junction x="30.48" y="60.96"/>
 <wire x1="25.4" y1="60.96" x2="20.32" y2="60.96" width="0.1524" layer="91"/>
 <junction x="25.4" y="60.96"/>
-</segment>
-<segment>
-<wire x1="220.98" y1="53.34" x2="220.98" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="50.8" x2="218.44" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="RN1" gate="D" pin="2"/>
-<pinref part="RN1" gate="C" pin="2"/>
-<wire x1="218.44" y1="50.8" x2="215.9" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="50.8" x2="213.36" y2="50.8" width="0.1524" layer="91"/>
-<junction x="215.9" y="50.8"/>
-<pinref part="RN1" gate="B" pin="2"/>
-<junction x="218.44" y="50.8"/>
-<pinref part="RN1" gate="A" pin="2"/>
-<junction x="220.98" y="50.8"/>
-<pinref part="P+6" gate="1" pin="+5V"/>
 </segment>
 <segment>
 <pinref part="SV1" gate="-2" pin="S"/>
@@ -22100,20 +22090,12 @@ Design By Jaofeng Chen</text>
 <segment>
 <pinref part="LCD" gate="G$1" pin="VDD"/>
 <pinref part="P+11" gate="1" pin="+5V"/>
-<wire x1="86.36" y1="58.42" x2="81.28" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="58.42" x2="76.2" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="58.42" x2="76.2" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="60.96" x2="76.2" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="58.42" x2="81.28" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="40.64" x2="78.74" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="RN3" gate="A" pin="1"/>
-<junction x="81.28" y="58.42"/>
-<wire x1="81.28" y1="40.64" x2="81.28" y2="22.86" width="0.1524" layer="91"/>
-<junction x="81.28" y="40.64"/>
-<pinref part="VR2" gate="G$1" pin="A"/>
+<wire x1="76.2" y1="58.42" x2="68.58" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="58.42" x2="68.58" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="66.04" x2="68.58" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="VR1" gate="G$1" pin="A"/>
-<wire x1="76.2" y1="60.96" x2="73.66" y2="60.96" width="0.1524" layer="91"/>
-<junction x="76.2" y="60.96"/>
+<wire x1="68.58" y1="66.04" x2="60.96" y2="66.04" width="0.1524" layer="91"/>
+<junction x="68.58" y="66.04"/>
 </segment>
 <segment>
 <pinref part="C6" gate="G$1" pin="+"/>
@@ -22123,6 +22105,27 @@ Design By Jaofeng Chen</text>
 <wire x1="27.94" y1="96.52" x2="27.94" y2="99.06" width="0.1524" layer="91"/>
 <junction x="27.94" y="96.52"/>
 <pinref part="P+12" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="VR2" gate="G$1" pin="A"/>
+<pinref part="P+13" gate="1" pin="+5V"/>
+<pinref part="RN3" gate="A" pin="1"/>
+<wire x1="99.06" y1="60.96" x2="104.14" y2="60.96" width="0.1524" layer="91"/>
+<junction x="104.14" y="60.96"/>
+</segment>
+<segment>
+<pinref part="RN1" gate="A" pin="2"/>
+<pinref part="RN1" gate="B" pin="2"/>
+<wire x1="213.36" y1="50.8" x2="215.9" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="RN1" gate="C" pin="2"/>
+<wire x1="215.9" y1="50.8" x2="218.44" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="RN1" gate="D" pin="2"/>
+<wire x1="218.44" y1="50.8" x2="220.98" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="P+6" gate="1" pin="+5V"/>
+<wire x1="220.98" y1="50.8" x2="220.98" y2="53.34" width="0.1524" layer="91"/>
+<junction x="220.98" y="50.8"/>
+<junction x="218.44" y="50.8"/>
+<junction x="215.9" y="50.8"/>
 </segment>
 </net>
 <net name="19V" class="0">
@@ -22247,7 +22250,7 @@ Design By Jaofeng Chen</text>
 <pinref part="SW1" gate="1" pin="P"/>
 <label x="210.82" y="38.1" size="1.778" layer="95" rot="R180"/>
 <wire x1="238.76" y1="38.1" x2="220.98" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="RN1" gate="A" pin="1"/>
+<pinref part="RN1" gate="D" pin="1"/>
 <wire x1="220.98" y1="38.1" x2="210.82" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="40.64" x2="220.98" y2="38.1" width="0.1524" layer="91"/>
 <junction x="220.98" y="38.1"/>
@@ -22263,7 +22266,7 @@ Design By Jaofeng Chen</text>
 <pinref part="SW2" gate="1" pin="P"/>
 <label x="210.82" y="35.56" size="1.778" layer="95" rot="R180"/>
 <wire x1="231.14" y1="35.56" x2="218.44" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="RN1" gate="B" pin="1"/>
+<pinref part="RN1" gate="C" pin="1"/>
 <wire x1="218.44" y1="35.56" x2="210.82" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="40.64" x2="218.44" y2="35.56" width="0.1524" layer="91"/>
 <junction x="218.44" y="35.56"/>
@@ -22279,7 +22282,7 @@ Design By Jaofeng Chen</text>
 <pinref part="SW3" gate="1" pin="P"/>
 <label x="210.82" y="33.02" size="1.778" layer="95" rot="R180"/>
 <wire x1="210.82" y1="33.02" x2="215.9" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="RN1" gate="C" pin="1"/>
+<pinref part="RN1" gate="B" pin="1"/>
 <wire x1="215.9" y1="33.02" x2="223.52" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="40.64" x2="215.9" y2="33.02" width="0.1524" layer="91"/>
 <junction x="215.9" y="33.02"/>
@@ -22295,7 +22298,7 @@ Design By Jaofeng Chen</text>
 <pinref part="SW4" gate="1" pin="P"/>
 <label x="210.82" y="30.48" size="1.778" layer="95" rot="R180"/>
 <wire x1="210.82" y1="30.48" x2="213.36" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="RN1" gate="D" pin="1"/>
+<pinref part="RN1" gate="A" pin="1"/>
 <wire x1="213.36" y1="30.48" x2="215.9" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="40.64" x2="213.36" y2="30.48" width="0.1524" layer="91"/>
 <junction x="213.36" y="30.48"/>
@@ -22461,13 +22464,13 @@ Design By Jaofeng Chen</text>
 <wire x1="53.34" y1="48.26" x2="55.88" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="48.26" x2="55.88" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="LCD" gate="G$1" pin="RS"/>
-<wire x1="55.88" y1="53.34" x2="86.36" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="53.34" x2="76.2" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$23" class="0">
 <segment>
 <pinref part="LCD" gate="G$1" pin="R/W"/>
-<wire x1="86.36" y1="50.8" x2="58.42" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="50.8" x2="58.42" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="50.8" x2="58.42" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="P1"/>
 <wire x1="58.42" y1="45.72" x2="53.34" y2="45.72" width="0.1524" layer="91"/>
@@ -22476,7 +22479,7 @@ Design By Jaofeng Chen</text>
 <net name="N$24" class="0">
 <segment>
 <pinref part="LCD" gate="G$1" pin="E"/>
-<wire x1="86.36" y1="48.26" x2="60.96" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="48.26" x2="60.96" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="48.26" x2="60.96" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="P2"/>
 <wire x1="60.96" y1="43.18" x2="53.34" y2="43.18" width="0.1524" layer="91"/>
@@ -22485,7 +22488,7 @@ Design By Jaofeng Chen</text>
 <net name="N$25" class="0">
 <segment>
 <pinref part="LCD" gate="G$1" pin="D7"/>
-<wire x1="86.36" y1="27.94" x2="55.88" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="27.94" x2="55.88" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="27.94" x2="55.88" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="P7"/>
 <wire x1="55.88" y1="30.48" x2="53.34" y2="30.48" width="0.1524" layer="91"/>
@@ -22497,7 +22500,7 @@ Design By Jaofeng Chen</text>
 <wire x1="53.34" y1="33.02" x2="58.42" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="33.02" x2="58.42" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="LCD" gate="G$1" pin="D6"/>
-<wire x1="58.42" y1="30.48" x2="86.36" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="30.48" x2="76.2" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$27" class="0">
@@ -22506,7 +22509,7 @@ Design By Jaofeng Chen</text>
 <wire x1="53.34" y1="35.56" x2="60.96" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="35.56" x2="60.96" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="LCD" gate="G$1" pin="D5"/>
-<wire x1="60.96" y1="33.02" x2="86.36" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="33.02" x2="76.2" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$28" class="0">
@@ -22515,40 +22518,31 @@ Design By Jaofeng Chen</text>
 <wire x1="53.34" y1="38.1" x2="63.5" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="38.1" x2="63.5" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="LCD" gate="G$1" pin="D4"/>
-<wire x1="63.5" y1="35.56" x2="86.36" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="35.56" x2="76.2" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$29" class="0">
+<net name="IC2P3" class="0">
+<segment>
+<pinref part="IC2" gate="G$1" pin="P3"/>
+<wire x1="60.96" y1="40.64" x2="53.34" y2="40.64" width="0.1524" layer="91"/>
+<label x="60.96" y="40.64" size="1.778" layer="95"/>
+</segment>
 <segment>
 <pinref part="RN3" gate="A" pin="2"/>
-<pinref part="IC2" gate="G$1" pin="P3"/>
-<wire x1="68.58" y1="40.64" x2="66.04" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="50.8" x2="99.06" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="Q2" gate="G$1" pin="B"/>
-<wire x1="66.04" y1="40.64" x2="53.34" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="25.4" x2="66.04" y2="40.64" width="0.1524" layer="91"/>
-<junction x="66.04" y="40.64"/>
-</segment>
-</net>
-<net name="N$14" class="0">
-<segment>
-<pinref part="LCD" gate="G$1" pin="A"/>
-<pinref part="Q2" gate="G$1" pin="C"/>
-<wire x1="86.36" y1="25.4" x2="71.12" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="25.4" x2="71.12" y2="20.32" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="VR2" gate="G$1" pin="S"/>
-<pinref part="LCD" gate="G$1" pin="K"/>
-<wire x1="86.36" y1="17.78" x2="86.36" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="43.18" x2="99.06" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="43.18" x2="96.52" y2="43.18" width="0.1524" layer="91"/>
+<junction x="99.06" y="43.18"/>
+<label x="96.52" y="43.18" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="LCD" gate="G$1" pin="V0"/>
 <pinref part="VR1" gate="G$1" pin="S"/>
-<wire x1="86.36" y1="55.88" x2="68.58" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="55.88" x2="66.04" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="55.88" x2="66.04" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$31" class="0">
@@ -22557,6 +22551,25 @@ Design By Jaofeng Chen</text>
 <pinref part="C10" gate="G$1" pin="2"/>
 <wire x1="60.96" y1="109.22" x2="55.88" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="109.22" x2="55.88" y2="101.6" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="VR2" gate="G$1" pin="S"/>
+<pinref part="Q2" gate="G$1" pin="C"/>
+<wire x1="109.22" y1="48.26" x2="109.22" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LCD_A" class="0">
+<segment>
+<pinref part="LCD" gate="G$1" pin="A"/>
+<wire x1="76.2" y1="25.4" x2="73.66" y2="25.4" width="0.1524" layer="91"/>
+<label x="73.66" y="25.4" size="1.778" layer="95" rot="MR0"/>
+</segment>
+<segment>
+<pinref part="Q2" gate="G$1" pin="E"/>
+<wire x1="109.22" y1="38.1" x2="109.22" y2="35.56" width="0.1524" layer="91"/>
+<label x="109.22" y="35.56" size="1.778" layer="95" rot="MR270"/>
 </segment>
 </net>
 </nets>
