@@ -1,5 +1,5 @@
 # 自製 UV 紫外線曝光控制器
-本控制器以 Arduino 為核心，控制 UV LED 燈板，作為 DIY PCB 曝光用。
+本控制器以 Arduino 的 ATMAGE328P 為核心，控制 UV LED 燈板，作為 DIY PCB 曝光用。
 
 ## 控制器硬體概要說明
 控制器分為兩版本：595版與I2C版。  
