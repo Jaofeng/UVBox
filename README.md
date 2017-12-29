@@ -49,4 +49,11 @@ LED 間距約 7 x 2.54 mm。
 * 時間可調整範圍自 0s ~ 600s
 * 警示音響起時，按任何一鍵停止響音
 
+***
+## 實做範例
+595 版正反面  
+![595版正反面](/Images/Demo1.jpg "595版正反面")
 
+USB to UART 轉接板  
+![USB to UART 正面](/Images/USB2UART-F.jpg "USB to UART 正面")
+![USB to UART 背面](/Images/USB2UART-B.jpg "USB to UART 背面")
