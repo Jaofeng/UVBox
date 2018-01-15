@@ -73,14 +73,11 @@ I2C LCD版
 
 ***
 ## 實做範例
-UV LED 燈板與控制板(595)  
-
+UV LED 燈板與控制板(595)    
 <img src="/Images/Demo3.jpg" title="燈板與控制板(未亮)" width="250" /><img src="/Images/Demo4.jpg" title="燈板與控制板(點亮)" width="250" /><img src="/Images/Demo7.jpg" title="底片與壓克力夾板" width="250" /><img src="/Images/Demo8.jpg" title="燈板與壓克力夾板放置位置" width="250" /><img src="/Images/Demo5.jpg" title="曝光中-側面" width="250" /><img src="/Images/Demo6.jpg" title="曝光中-俯視" width="250" />
 
-595 版正反面  
-
+595 版正反面    
 <img src="/Images/Demo1.jpg" title="595版正反面" height="200" /><img src="/Images/Demo2.jpg" title="595版正面" height="200" />
 
-自製 USB to UART 轉接板  
-
+自製 USB to UART 轉接板    
 <img src="/Images/USB2UART-F.jpg" title="USB to UART 正面" height="60" /><img src="/Images/USB2UART-B.jpg" title="USB to UART 背面" height="60" />
