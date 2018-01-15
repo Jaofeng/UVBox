@@ -2,9 +2,9 @@
 本控制器以 Arduino 的 ATMEGA328P 為核心，控制 UV LED 燈板，作為 DIY PCB 曝光用。
 
 ## 控制器硬體概要說明
-控制器分為兩版本：595版與I2C版。  
-兩版本電路、功能都大同小異，最大差別在於 595 版是使用 74x595 控制七段顯示器作為顯示；I2C 則是使用 PCF8574 控制 1602 的 LCD(相容HD44780)。  
-I2C 版提供 USB 界面(使用 FT232R)，可直接修改 Arduino 程式；而 595 版本就必須使用 ICSP 界面進行更新。
+控制器分為兩版本：595 版與 I2C LCD 版。  
+兩版本電路、功能都大同小異，最大差別在於 595 版是使用 74x595 控制七段顯示器作為顯示；I2C LCD 則是使用 PCF8574 控制 1602 的 LCD(相容HD44780)。  
+I2C LCD 版提供 USB 界面(使用 FT232R)，可直接修改 Arduino 程式；而 595 版本就必須使用 ICSP 界面進行更新。
 
 使用 4 + 1 個按鍵共 5 個按鍵進行控制：
 * Start : 開始曝光
@@ -47,7 +47,20 @@ LED 間距約 7 x 2.54 mm。
 * 可單一控制上下燈板
 * 亮度調整範圍自 0% ~ 100%
 * 時間可調整範圍自 0s ~ 600s
+* 曝光時間結束時，自動關閉光板，並響起警示音
 * 警示音響起時，按任何一鍵停止響音
+
+***
+## 原理圖與板線圖
+595版  
+<img src="/Images/595_SCH.png" alt="595 版原理圖" title="595 版原理圖" width="200" />
+<img src="/Images/595_BRD_F.png" alt="595 正面板線圖" title="595 正面板線圖" width="200" />
+<img src="/Images/595_BRD_B.png" alt="595 背面板線圖" title="595 背面板線圖" width="200" />
+
+I2C LCD版  
+<img src="/Images/I2C_LCD_SCH.png" alt="I2C LCD 版原理圖" title="I2C LCD 版原理圖" width="200" />
+<img src="/Images/I2C_LCD_BRD_F.png" alt="I2C LCD 正面板線圖" title="I2C LCD 正面板線圖" width="200" />
+<img src="/Images/I2C_LCD_BRD_B.png" alt="I2C LCD 背面板線圖" title="I2C LCD 背面板線圖" width="200" />
 
 ***
 ## 實做範例
