@@ -1,6 +1,13 @@
 # 自製 UV 紫外線曝光控制器
 本控制器以 Arduino 的 ATMEGA328P 為核心，控制 UV LED 燈板，作為 DIY PCB 曝光用。
 
+## 目錄
+* [控制器硬體概要說明](#控制器硬體概要說明)
+* [Arduino 程式功能](#arduino程式功能)
+* [原理圖與板線圖](#原理圖與板線圖)
+* [實做範例](#實做範例)
+
+
 ## 控制器硬體概要說明
 控制器分為兩版本：595 版與 I2C LCD 版。  
 兩版本電路、功能都大同小異，最大差別在於 595 版是使用 74x595 控制七段顯示器作為顯示；I2C LCD 則是使用 PCF8574 控制 1602 的 LCD(相容HD44780)。  
@@ -64,10 +71,11 @@ I2C LCD版
 
 ***
 ## 實做範例
-595 版正反面  
+UV LED 燈板與控制板(595)  
+<img src="/Images/Demo3.jpg" title="燈板與控制板(未亮)" width="250" /><img src="/Images/Demo4.jpg" title="燈板與控制板(點亮)" width="250" /><img src="/Images/Demo7.jpg" title="底片與壓克力夾板" width="250" /><img src="/Images/Demo8.jpg" title="燈板與壓克力夾板放置位置" width="250" /><img src="/Images/Demo5.jpg" title="曝光中-側面" width="250" /><img src="/Images/Demo6.jpg" title="曝光中-俯視" width="250" />
 
-<img src="/Images/Demo1.jpg" alt="595版正反面" height="200" /><img src="/Images/Demo2.jpg" alt="595版正面" height="200" />
+595 版正反面  
+<img src="/Images/Demo1.jpg" title="595版正反面" height="200" /><img src="/Images/Demo2.jpg" title="595版正面" height="200" />
 
 自製 USB to UART 轉接板  
-
-<img src="/Images/USB2UART-F.jpg" alt="USB to UART 正面" height="60" /><img src="/Images/USB2UART-B.jpg" alt="USB to UART 背面" height="60" />
+<img src="/Images/USB2UART-F.jpg" title="USB to UART 正面" height="60" /><img src="/Images/USB2UART-B.jpg" title="USB to UART 背面" height="60" />
