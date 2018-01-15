@@ -52,8 +52,9 @@ LED 間距約 7 x 2.54 mm。
 ***
 ## 實做範例
 595 版正反面  
-![595版正反面](/Images/Demo1.jpg "595版正反面")
 
-USB to UART 轉接板  
-![USB to UART 正面](/Images/USB2UART-F.jpg "USB to UART 正面")
-![USB to UART 背面](/Images/USB2UART-B.jpg "USB to UART 背面")
+<img src="/Images/Demo1.jpg" alt="595版正反面" height="200" /><img src="/Images/Demo2.jpg" alt="595版正面" height="200" />
+
+自製 USB to UART 轉接板  
+
+<img src="/Images/USB2UART-F.jpg" alt="USB to UART 正面" height="60" /><img src="/Images/USB2UART-B.jpg" alt="USB to UART 背面" height="60" />
